@@ -1,0 +1,72 @@
+# JavaScript
+node_modules/
+dist/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+coverage.xml
+htmlcov/
+*.egg-info/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+
+# Local application data and downloaded model artifacts
+storage/documents/
+models/weights/
+.paddlex/
+.paddleocr/
+*.onnx
+*.pdmodel
+*.pdparams
+*.pdiparams
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+
+# Personal document formats are never committed by default. Add only reviewed,
+# synthetic fixtures explicitly under a dedicated test-fixtures directory.
+*.pdf
+*.doc
+*.docx
+*.odt
+*.xls
+*.xlsx
+*.ods
+*.ppt
+*.pptx
+*.odp
+
+# Editor, operating-system, archive, and temporary files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+tmp/
+temp/
+uploads/
+output/
+outputs/
+*.zip
+*.7z
+*.rar

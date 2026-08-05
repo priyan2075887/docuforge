@@ -1,0 +1,3 @@
+# Local, permissively licensed OCR runtime. Model files download on first use.
+paddlepaddle==3.2.2
+paddleocr==3.7.0

@@ -1,0 +1,102 @@
+name: Bug report
+description: Report a reproducible problem in DocuForge
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve DocuForge. Search existing issues first and use a small synthetic document when a file is needed to reproduce the problem.
+
+        **Do not post security vulnerabilities or private documents here.** Follow `SECURITY.md` for security reports and remove document contents, OCR text, usernames, tokens, and local paths from public material.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      description: Choose the closest part of DocuForge.
+      options:
+        - PDF viewer or analysis
+        - PDF organize, merge, or split
+        - OCR
+        - Writer or DOCX interoperability
+        - Spreadsheet or XLSX interoperability
+        - Presentation or PPTX interoperability
+        - Document library or storage
+        - FastAPI backend
+        - Startup, build, or installation
+        - Accessibility or keyboard interaction
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem and its user impact.
+      placeholder: A clear and concise description of the failure.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Provide the smallest reliable sequence. State whether the API was running.
+      placeholder: |
+        1. Start the API and web application
+        2. Import a synthetic PDF with ...
+        3. Open ...
+        4. Select ...
+        5. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include enough information to reproduce the behavior.
+      placeholder: |
+        - OS and version:
+        - Browser and version:
+        - Python version:
+        - Node.js version:
+        - DocuForge commit or branch:
+        - OCR installed: no / PaddleOCR version
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs or screenshots
+      description: Paste a short sanitized error or attach sanitized images. Use code fences for logs.
+      render: shell
+
+  - type: textarea
+    id: sample
+    attributes:
+      label: Synthetic reproducer details
+      description: Describe or attach a minimal file that is safe to publish. Do not upload a real user document.
+      placeholder: Page count, dimensions, format, operations performed, and how the sample was generated.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checks
+      options:
+        - label: I searched existing issues for this problem.
+          required: true
+        - label: I removed private document contents, OCR text, credentials, usernames, and local paths.
+          required: true
+        - label: This is not an undisclosed security vulnerability.
+          required: true
